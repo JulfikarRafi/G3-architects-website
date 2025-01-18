@@ -306,5 +306,10 @@ main>section{
         gap: 50px;
         justify-items: center;
     }
+    .footer{
+        margin: 20px 30px;
+        padding: 20px 40px;
+        text-align: center;
+    }
     
 }
