@@ -69,7 +69,22 @@ main>section{
     font-weight: 600;
     font-size: 1.25rem;
 }
-
+.big-btn{
+    background-color: #FF900E;
+    color: white;
+    padding: 45px 42px;
+    border-radius: 8px;
+    border: none;
+    
+}
+#year{
+    font-weight: 700;
+    font-size: 4rem;
+}
+#exp{
+    font-weight: 500;
+    font-size: 1.75rem;
+}
 
 
 /* header styles */
@@ -142,10 +157,27 @@ main>section{
 
 
 /* Features you will love section styles */
-.section-title{
-
+.features-main{
+    gap: 146px;
 }
 
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-card{
+    max-width: 586px;
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    
+}
+.feature-card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
 
 
 
@@ -169,7 +201,6 @@ main>section{
 .fact{
    width: 240px;
    height: 240px;
-   background-color: aqua;
    border: 1px solid #FF900E;
    border-radius: 8px;
    justify-content: center;
@@ -195,17 +226,39 @@ main>section{
 }
 
 
+/* sponsor related style */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
 /* responsive media query */
 @media screen and (max-width : 576px) {
     .navbar , .nav-links , .teams{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container , 
+    .facts-container ,
+    .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
         margin-left: 20px;
     }
+    .facts-container , .sponsor-companies{
+        justify-items: center;
+        gap: 24px;
+    }
+   
 }
 
 /* medium size device */
@@ -215,6 +268,11 @@ main>section{
     }
     .our-features{
         margin: 50px auto;
+    }
+    .sponsor-companies , .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
     }
     
 }
